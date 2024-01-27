@@ -189,7 +189,6 @@ const About = () => {
                   <div className='text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px] '>Finished Projects</div>
                 </div>
                 {/* awards */}
-                
               </div>
             </motion.div>
           </div>
@@ -220,7 +219,11 @@ const About = () => {
                       <div className='flex gap-x-4'>
                         {/* icons */}
                         {item.icons?.map((icon, itemIcon) => {
-                          return <div className='text-2xl'>{icon}</div>
+                          return (
+                            <div key={itemIcon} className='text-2xl'>
+                              {icon}
+                            </div>
+                          );
                         })}
                       </div>
                   </div>
